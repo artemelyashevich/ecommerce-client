@@ -1,0 +1,22 @@
+<form (ngSubmit)="login()">
+    <div class="link">
+        <h1>Login</h1>
+    </div>
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form2Example1">Email address</label>
+        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="loginDto.email" type="email" id="form2Example1"
+            class="form-control" />
+    </div>
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form2Example2">Password</label>
+        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="loginDto.password" type="password" id="form2Example2"
+            class="form-control" />
+    </div>
+    <div class="link">
+        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign
+            in</button>
+    </div>
+    <div class="link">
+        <a routerLink="/register" class="register-link">Register here</a>
+    </div>
+</form>
