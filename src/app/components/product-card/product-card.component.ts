@@ -1,11 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProductDto } from '../../model/product.model';
+import { RouterLink } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-card',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './product-card.component.html',
-  styleUrl: './product-card.component.css'
+  styles: ``
 })
 export class ProductCardComponent {
+  @Input() product!: ProductDto
 
+  constructor(
+    private cartService: CartService
+  ) { }
+
+  public saveCart() {
+    // this.cartService.saveCart().subscribe(data => {
+    //   console.log(data);
+    // }); 
+  }
 }

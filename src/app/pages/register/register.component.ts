@@ -13,11 +13,12 @@ import { AuthService } from '../../services/auth.service';
 export class RegisterComponent {
 
   registerDto: RegisterDto = {
-    "email": '',
-    "password": '',
-    "firstName": '',
-    "lastName": '',
-    "birthDate": new Date()
+    username: '',
+    email: '',
+    password: '',
+    fullName: '',
+    address: '',
+    birthDate: new Date()
   }
 
   constructor(
@@ -26,6 +27,8 @@ export class RegisterComponent {
   ){}
   
   register(){
+    console.log(this.registerDto)
+    
     this.authService.register(this.registerDto).subscribe(
       (response) => {
         localStorage.setItem('accessToken', response.accessToken);

@@ -8,18 +8,23 @@
             class="form-control" />
     </div>
     <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="form2Example2">First name</label>
-        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="registerDto.firstName" type="text" id="form2Example2"
+        <label class="form-label" for="form2Example2">Username</label>
+        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="registerDto.username" type="text" id="form2Example2"
             class="form-control" />
     </div>
-    <div data-mdb-input-init class="form-outline mb-4">
-        <label class="form-label" for="form2Example2">Last name</label>
-        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="registerDto.lastName" type="text" id="form2Example2"
-            class="form-control" />
-    </div>
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="form2Example2">Full name</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)]="registerDto.fullName" type="text" id="form2Example2"
+                class="form-control" />
+        </div>
     <div data-mdb-input-init class="form-outline mb-4">
         <label class="form-label" for="form2Example2">Birth date</label>
         <input [ngModelOptions]="{standalone: true}" [(ngModel)]="registerDto.birthDate" type="date" id="form2Example2"
+            class="form-control" />
+    </div>
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form2Example2">Address</label>
+        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="registerDto.address" type="text" id="form2Example2"
             class="form-control" />
     </div>
     <div data-mdb-input-init class="form-outline mb-4">
